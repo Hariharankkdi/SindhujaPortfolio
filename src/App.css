@@ -231,7 +231,9 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 /************ Banner Css ************/
+
 .banner {
+  position: relative; /* Ensure the container is positioned */
   margin-top: 0;
   padding: 260px 0 100px 0;
   background-image: url('./assets/img/banner-bg.png');
@@ -239,6 +241,27 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   background-size: cover;
   background-repeat: no-repeat;
 }
+
+/* Create a pseudo-element for applying opacity */
+.banner::before {
+  content: "";
+  position: absolute; /* Position the pseudo-element */
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(15, 15, 14, 0.7); /* Adjust the last value (0.5) for opacity */
+}
+
+/* Ensure the content is above the pseudo-element */
+.banner-content {
+  position: relative;
+  z-index: 1;
+  /* Any other styles for your content */
+}
+
+
+
 .banner .tagline {
   font-weight: 700;
   letter-spacing: 0.8px;
@@ -368,7 +391,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   overflow: hidden;
 }
 .project .nav.nav-pills .nav-item {
-  width: 33.33333%;
+  /* width: 33.33333%; */
+  width: 100%;
 }
 .project .nav.nav-pills .nav-link {
   background-color: transparent;
@@ -413,9 +437,15 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 0 55px 55px 0;
 }
+
+a {
+  color: white !important; /* or specify the color you want */
+  text-decoration: none !important; /* Removes underline */
+}
+
 .proj-imgbx {
   position: relative;
-  border-radius: 30px;
+  border-radius: 10px;
   overflow: hidden;
   margin-bottom: 24px;
 }

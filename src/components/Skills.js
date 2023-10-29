@@ -39,22 +39,19 @@ export const Skills = () => {
                         I possess a set of skills in the field of UI/UX design. These abilities enable me to create user interfaces and experiences that are both visually appealing and highly functional. With a keen eye for aesthetics and a strong understanding of user behavior, I can craft designs that not only look great but also ensure a smooth and intuitive user journey. My proficiency in UI/UX design extends to creating wireframes, prototypes, and mockups, as well as conducting user research to inform design decisions. These skills have equipped me to contribute to projects that prioritize user-centric design and enhance the overall user experience.
                         </p>
                         <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
+                         
+                            <div className="item">
+                                <img src={meter3} alt="Image" />
+                                <h5>Logo Design</h5>
+                            </div>
                             <div className="item">
                                 <img src={meter1} alt="Image" />
                                 <h5>Web Design</h5>
                             </div>
                             <div className="item">
                                 <img src={meter2} alt="Image" />
-                                <h5>Mobile App Design</h5>
+                                <h5>App Design</h5>
                             </div>
-                            <div className="item">
-                                <img src={meter3} alt="Image" />
-                                <h5>Logo Design</h5>
-                            </div>
-                            {/* <div className="item">
-                                <img src={meter1} alt="Image" />
-                                <h5>Web Development</h5>
-                            </div> */}
                         </Carousel>
                     </div>
                 </div>
